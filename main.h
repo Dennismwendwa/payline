@@ -14,12 +14,15 @@ class User
         std::string username;
         std::string password;
         std::string email;
+        std::string hashPassWord(const std::string& plain_password) const;
 
     public:
-        User(const std::string &user, const std::string &pass,
-        const std::string &email, const std::string first_name,
-        const std::string &last_name);
-
+        User(const std::string &user,
+            const std::string &pass,
+            const std::string &email,
+            const std::string first_name, 
+            const std::string &last_name
+            );
         virtual void displayRole() const;
         virtual ~User();
 };
@@ -36,8 +39,8 @@ public:
 class Supervisor : public User {
 public:
     Supervisor(const std::string& user, const std::string& pass,
-               const std::string& email,
-               const std::string& firstName, const std::string& lastName);
+               const std::string& email, const std::string& firstName,
+               const std::string& lastName);
 
     void displayRole() const override;
 };
