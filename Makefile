@@ -1,7 +1,6 @@
 CXX = g++
 CXXFLAGS = -Wall -std=c++17
-#LIBS = -lssl -lcrypto
-LIBS = 
+LIBS = -lssl -lcrypto
 
 OBJS = main.o class.o user.o manager.o supervisor.o items.o
 TARGET = payline

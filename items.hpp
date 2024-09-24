@@ -7,20 +7,18 @@
 
 class Item
 {
-    //std::string user_type = "normal";
-
     protected:
         std::string name;
         int price;
+        double discount;
         int stock;
-        std::string seller;
         std::string barcode;
 
     public:
         Item(const std::string &name,
             const int &price,
+            double discount,
             const int &stock,
-            const std::string seller, 
             const std::string &barcode
             );
         virtual void printObject() const;

@@ -15,17 +15,15 @@ int main() {
 
     Item* item[3];
 
-    item[0] = new Item("Tomato", 200, 300, "doro", "ruuuuuuuuds");
-    item[1] = new Item("Mango", 100, 300, "charles", "rtyuuuuds");
-    item[2] = new Item("carotes", 200, 300, "Musa", "yuteoeiis");
+    item[0] = new Item("Tomato", 200, 0.4, 300, "ruuuuuuuuds");
+    item[1] = new Item("Mango", 100, 0.6, 500, "rtyuuuuds");
+    item[2] = new Item("carotes", 200, 8, 800, "yuteoeiis");
 
     for (int i = 0; i < 3; ++i) {
         item[i]->printObject();
         std::cout << std::endl;
         delete item[i]; // Clean up
     }
-
-
 
     return 0;
 }
