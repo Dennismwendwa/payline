@@ -1,4 +1,5 @@
 #include "main.h"
+#include "items.hpp"
 
 int main() {
     User* users[3];
@@ -11,6 +12,20 @@ int main() {
         std::cout << std::endl;
         delete users[i]; // Clean up
     }
+
+    Item* item[3];
+
+    item[0] = new Item("Tomato", 200, 300, "doro", "ruuuuuuuuds");
+    item[1] = new Item("Mango", 100, 300, "charles", "rtyuuuuds");
+    item[2] = new Item("carotes", 200, 300, "Musa", "yuteoeiis");
+
+    for (int i = 0; i < 3; ++i) {
+        item[i]->printObject();
+        std::cout << std::endl;
+        delete item[i]; // Clean up
+    }
+
+
 
     return 0;
 }

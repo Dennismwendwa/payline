@@ -1,8 +1,9 @@
 CXX = g++
 CXXFLAGS = -Wall -std=c++17
-LIBS = -lssl -lcrypto
+#LIBS = -lssl -lcrypto
+LIBS = 
 
-OBJS = main.o class.o user.o manager.o supervisor.o
+OBJS = main.o class.o user.o manager.o supervisor.o items.o
 TARGET = payline
 
 all: $(TARGET)
@@ -24,6 +25,9 @@ manager.o: manager.cpp main.h
 
 supervisor.o: supervisor.cpp main.h
 	$(CXX) $(CXXFLAGS) -c supervisor.cpp
+
+items.o: items.cpp main.h items.hpp
+	$(CXX) $(CXXFLAGS) -c items.cpp
 
 clean:
 	rm -f $(OBJS) $(TARGET)

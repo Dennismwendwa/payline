@@ -1,10 +1,11 @@
-#include <openssl/evp.h>
+//#include <openssl/evp.h>
 #include <sstream>
 #include <iomanip>
 
 #include "main.h"
 
 std::string User::hashPassWord(const std::string& plain_password) const {
+    /*
     unsigned char hash[EVP_MAX_MD_SIZE];
     unsigned int length = 0;
 
@@ -21,6 +22,8 @@ std::string User::hashPassWord(const std::string& plain_password) const {
         ss << std::hex << std::setw(2) << std::setfill('0') << static_cast<int>(hash[i]);
     }
     return ss.str();
+    */
+    return plain_password;
 
 }
 
